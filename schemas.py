@@ -3,20 +3,21 @@ from typing import List, Optional
 
 # This matches the blue table headers in your image
 class ProjectDetails(BaseModel):
-    server_location: str = "N/A"
-    platform: str = "N/A"
-    version: str = "N/A"
+    server_location: str | None = "N/A"
+    platform: str | None = "N/A"
+    version: str | None = "N/A"
     application_name: str
-    database_type: str = "SQL Server"
+    database_type: str | None = "SQL Server"
     database_name: str
-    database_account: str
-    password_change_complete: str = "no"
+    database_account: str | None = "Unknown"
+    password_change_complete: str | None = "no"
     owner: str
-    proxy_type: str = "External"
-    user_auth: str = "Azure MS Entra ID"
-    internal_connection: str
-    external_connection: str
-    note: Optional[str] = None
+    proxy_type: str | None = "External"
+    user_auth: str | None = "Azure MS Entra ID"
+    service_account: str | None = "Unknown"  # 👈 THE NEW EXCEL COLUMN
+    internal_connection: str | None = "Unknown"
+    external_connection: str | None = "Unknown"
+    note: str | None = None
 
 class ProjectCreate(BaseModel):
     name: str

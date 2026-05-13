@@ -51,6 +51,7 @@ def get_projects(db: Session = Depends(database.get_db)):
             "owner": "Unknown",
             "proxy_type": "External",
             "user_auth": "Azure MS Entra ID",
+            "service_account": "Unknown", # 👈 ADD THIS LINE HERE
             "internal_connection": "Unknown",
             "external_connection": "Unknown",
             "note": None
