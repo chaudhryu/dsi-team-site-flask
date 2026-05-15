@@ -3,11 +3,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-# Use your actual credentials here
 DB_HOST = "MTAMASQL02DEV"
 DB_NAME = "DSI"
-DB_USER = "DSI_Admin"
-DB_PASS = "mR5&tX9!bK2#wP7"
+DB_USER = "DSI_APP"
+DB_PASS = "Y_z#hn/Z9ISem!"
 
 params = urllib.parse.quote_plus(
     f"DRIVER={{ODBC Driver 17 for SQL Server}};"
